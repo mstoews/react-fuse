@@ -1,7 +1,6 @@
-import DemoContent from '@fuse/core/DemoContent';
 import { styled } from '@mui/material/styles';
 import FusePageSimple from '@fuse/core/FusePageSimple';
-import { useTranslation } from 'react-i18next';
+import DemoContent from '@fuse/core/DemoContent';
 
 const Root = styled(FusePageSimple)({
   '& .FusePageSimple-header': {},
@@ -12,24 +11,17 @@ const Root = styled(FusePageSimple)({
 });
 
 function SecondPage(props) {
-
   return (
     <Root
       header={
-        <div className="p-24">
-          <h1>Second Page</h1>
-        </div>
-      }
-      contentToolbar={
-        <div className="px-24">
-          <h4>Content Toolbar</h4>
+        <div className="p-36">
+          <h1>Landing Page Example</h1>
         </div>
       }
       content={
-        <div className="p-24">
-          <h4>Content</h4>
-          <br />
+        <div className="p-36">
           <DemoContent />
+          <br />
         </div>
       }
     />

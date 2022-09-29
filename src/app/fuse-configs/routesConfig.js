@@ -1,10 +1,13 @@
 import { Navigate } from 'react-router-dom';
 import FuseUtils from '@fuse/utils';
-import ExampleConfig from 'app/main/example/ExampleConfig';
+import LandingPageConfig from 'app/main/LandingPage/LandingPageConfig';
+import NotesAppConfig from 'app/main/notes/NotesAppConfig';
+import SecondPageConfig from 'app/main/second-page/SecondPageConfig';
+import PartyPageConfig from 'app/main/PartyPage/partyPageConfig';
 import FuseLoading from '@fuse/core/FuseLoading';
 import Error404Page from 'app/main/404/Error404Page';
 
-const routeConfigs = [ExampleConfig];
+const routeConfigs = [LandingPageConfig, SecondPageConfig, NotesAppConfig, PartyPageConfig];
 
 const routes = [
   // if you want to make whole app auth protected by default change defaultAuth for example:
@@ -15,10 +18,10 @@ const routes = [
     path: '/',
     element: <Navigate to="example" />,
   },
-  {
-    path: 'second-page',
-    element: <Navigate to="second-page" />,
-  },
+  // {
+  //   path: 'second-page',
+  //   element: <Navigate to="second-page" />,
+  // },
   {
     path: 'loading',
     element: <FuseLoading />,
